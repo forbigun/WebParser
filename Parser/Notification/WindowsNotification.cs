@@ -12,7 +12,7 @@ namespace Parser.Notification
 			_builder = new ToastContentBuilder();
 		}
 
-		public ToastContentBuilder AddImage(Uri uri) => _builder.AddInlineImage(uri);
+		public ToastContentBuilder AddImage(Uri uri) => _builder.AddInlineImage(uri, alternateText: "Picture");
 
 		public ToastContentBuilder AddAppLogo(Uri uri) => _builder.AddAppLogoOverride(uri);
 

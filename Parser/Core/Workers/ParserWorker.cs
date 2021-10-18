@@ -1,6 +1,7 @@
-﻿using System.Threading.Tasks;
+﻿using AngleSharp.Html.Parser;
+using System.Threading.Tasks;
 
-namespace Parser.Core
+namespace Parser.Core.Workers
 {
 	public abstract class ParserWorker<T> where T : class
 	{
@@ -50,6 +51,14 @@ namespace Parser.Core
 		public void Abort()
 		{
 			IsActive = false;
+		}
+
+		protected async Task<T> GetHtmlDocument(string source)
+		{
+			var domParser = new HtmlParser();
+			var document = await domParser.ParseDocumentAsync(source);
+
+			return _parser.Parse(document);
 		}
 
 		protected abstract Task<T> Work();

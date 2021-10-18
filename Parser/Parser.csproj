@@ -55,10 +55,10 @@
     <Compile Include="Core\IParser.cs" />
     <Compile Include="Core\IParserPagesSettings.cs" />
     <Compile Include="Core\IParserSettings.cs" />
-    <Compile Include="Core\ParserWorker.cs" />
+    <Compile Include="Core\Workers\ParserWorker.cs" />
     <Compile Include="Core\RedSquare\RedSquareParser.cs" />
     <Compile Include="Core\RedSquare\RedSquareSettings.cs" />
-    <Compile Include="Core\RedSquare\RedSquareWorker.cs" />
+    <Compile Include="Core\Workers\SimpleWorker.cs" />
     <Compile Include="Notification\INotification.cs" />
     <Compile Include="Notification\WindowsNotification.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
